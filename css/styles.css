@@ -129,7 +129,7 @@ p {
 .header {
   background-color: var(--white);
   color: var(--secondary);
-  padding: 1.25rem 0;
+  padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -144,7 +144,7 @@ p {
 }
 
 .logo-image {
-  height: 60px;
+  height: 120px; /* Doubled from 60px to 120px */
   width: auto;
   transition: transform 0.3s ease;
 }

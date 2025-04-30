@@ -37,21 +37,30 @@ if (mobileNavLinks) {
 }
 
 // Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    
-    const targetId = this.getAttribute('href').substring(1);
-    
-    if (targetId) {
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - 80, // Offset for header height
-          behavior: 'smooth'
-        });
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href').substring(1);
+      
+      if (targetId) {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          // Get the header height
+          const headerHeight = 80; // Fixed value to ensure consistency
+          
+          // Calculate position and scroll
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
       }
-    }
+    });
   });
 });
 
@@ -67,3 +76,24 @@ window.addEventListener('scroll', () => {
 
 // Initialize AOS animations (if you decide to add them)
 // AOS.init({ duration: 800, easing: 'ease-out' });
+
+// Additional direct handler for the Get Started button
+document.addEventListener('DOMContentLoaded', function() {
+  const getStartedBtn = document.querySelector('.hero .btn-primary');
+  if (getStartedBtn) {
+    getStartedBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        // Fixed offset height
+        const headerHeight = 80;
+        const yPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        
+        window.scrollTo({
+          top: yPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  }
+});

@@ -1,3 +1,28 @@
+// Function to scroll to contact section
+function scrollToContact(event) {
+  event.preventDefault();
+  const contactSection = document.getElementById('contact');
+  if (contactSection) {
+    const headerHeight = 80; // Fixed header height
+    const sectionPosition = contactSection.offsetTop - headerHeight;
+    
+    // Use both methods for maximum compatibility
+    // Method 1: scrollTo
+    window.scrollTo({
+      top: sectionPosition,
+      behavior: 'smooth'
+    });
+    
+    // Method 2: scrollIntoView (backup)
+    contactSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+    
+    console.log("Scrolling to contact section at position:", sectionPosition);
+  }
+}
+
 // Set current year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -36,34 +61,6 @@ if (mobileNavLinks) {
   });
 }
 
-// Smooth scrolling for anchor links
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      
-      const targetId = this.getAttribute('href').substring(1);
-      
-      if (targetId) {
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          // Get the header height
-          const headerHeight = 80; // Fixed value to ensure consistency
-          
-          // Calculate position and scroll
-          const elementPosition = targetElement.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
-          
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }
-      }
-    });
-  });
-});
-
 // Add shadow to header on scroll
 const header = document.querySelector('.header');
 window.addEventListener('scroll', () => {
@@ -74,26 +71,57 @@ window.addEventListener('scroll', () => {
   }
 });
 
+// Simple script to handle the Get Started button click
+document.addEventListener('DOMContentLoaded', function() {
+  // Get the button and the contact section
+  const getStartedBtn = document.querySelector('.hero .btn-primary');
+  const contactSection = document.getElementById('contact');
+  
+  // Only add listener if both elements exist
+  if (getStartedBtn && contactSection) {
+    getStartedBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Get the position of the contact section
+      const sectionPosition = contactSection.offsetTop;
+      
+      // Scroll to the section with offset for header
+      window.scrollTo({
+        top: sectionPosition - 80, // 80px for header height
+        behavior: 'smooth'
+      });
+      
+      console.log('Button clicked, scrolling to:', sectionPosition - 80);
+    });
+    
+    console.log('Scroll handler attached to Get Started button');
+  }
+});
+
 // Initialize AOS animations (if you decide to add them)
 // AOS.init({ duration: 800, easing: 'ease-out' });
 
-// Additional direct handler for the Get Started button
+// Handle all anchor links for smooth scrolling
 document.addEventListener('DOMContentLoaded', function() {
-  const getStartedBtn = document.querySelector('.hero .btn-primary');
-  if (getStartedBtn) {
-    getStartedBtn.addEventListener('click', function(e) {
+  // Select all links with hash (#) but not the Get Started button (already handled)
+  const anchorLinks = document.querySelectorAll('a[href^="#"]:not(.hero .btn-primary)');
+  
+  anchorLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
       e.preventDefault();
-      const contactSection = document.getElementById('contact');
-      if (contactSection) {
-        // Fixed offset height
-        const headerHeight = 80;
-        const yPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-        
-        window.scrollTo({
-          top: yPosition,
-          behavior: 'smooth'
-        });
+      
+      const targetId = this.getAttribute('href').substring(1);
+      if (targetId) {
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          const sectionPosition = targetSection.offsetTop;
+          
+          window.scrollTo({
+            top: sectionPosition - 80,
+            behavior: 'smooth'
+          });
+        }
       }
     });
-  }
+  });
 });

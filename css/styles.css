@@ -288,10 +288,20 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.08;
-  background-image: linear-gradient(rgba(255, 135, 51, 0.5) 1px, transparent 1px), linear-gradient(to right, rgba(255, 135, 51, 0.5) 1px, transparent 1px);
-  background-size: 60px 60px;
   z-index: 1;
+  background-color: #ffffff; /* White background */
+  background-image: 
+    linear-gradient(
+      rgba(255, 158, 89, 0.15) 1px, 
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg, 
+      rgba(255, 158, 89, 0.15) 1px, 
+      transparent 1px
+    );
+  background-size: 120px 120px; /* Larger squares to match the image */
+  background-position: -0.5px -0.5px;
 }
 
 .hero-bg-symbol {

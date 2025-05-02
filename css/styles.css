@@ -131,7 +131,7 @@ p {
 .header {
   background-color: var(--white);
   color: var(--secondary);
-  padding: 1rem 0;
+  padding: 0.65rem 0; /* Reduced from 1rem to better fit the 90px logo */
   position: sticky;
   top: 0;
   z-index: 100;

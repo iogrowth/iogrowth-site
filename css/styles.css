@@ -146,7 +146,7 @@ p {
 }
 
 .logo-image {
-  height: 120px; /* Doubled from 60px to 120px */
+  height: 90px; /* Changed from 120px to 90px */
   width: auto;
   transition: transform 0.3s ease;
 }

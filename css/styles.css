@@ -131,38 +131,50 @@ p {
 .header {
   background-color: var(--white);
   color: var(--secondary);
-  padding: 0.65rem 0; /* Reduced from 1rem to better fit the 90px logo */
+  padding: 0.25rem 0; /* Minimized padding for most compact header */
   position: sticky;
   top: 0;
   z-index: 100;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* Prevents logo from extending outside header */
 }
 
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 55px; /* Reduced from 60px to 55px for more compact header */
+  max-height: 55px; /* Ensure it doesn't exceed this height */
 }
 
 .logo-image {
-  height: 90px; /* Changed from 120px to 90px */
+  height: 90px; /* Maintains 90px height */
   width: auto;
   transition: transform 0.3s ease;
+  margin-top: -17px; /* Further increased negative margin for even more compact header */
+  margin-bottom: -18px; /* Slightly unbalanced to optimize visual appearance */
+  transform: translateY(-3px); /* Further adjusted for ideal positioning in compact header */
 }
 
 .logo {
   position: relative;
   z-index: 10;
   margin-right: 20px;
+  display: flex;
+  align-items: center;
+  height: 55px; /* Reduced to match updated header-content height */
+  overflow: hidden; /* Clips the logo if it extends beyond the container */
 }
 
 .logo-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .logo-link:hover .logo-image {
-  transform: scale(1.05);
+  transform: translateY(-3px) scale(1.05);
 }
 
 .main-nav {

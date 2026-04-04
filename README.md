@@ -1,6 +1,6 @@
-# Growth IO Website - GitHub Pages Version
+# IO Growth Website - GitHub Pages Version
 
-This is the static website version of the Growth IO business consulting site, optimized for hosting on GitHub Pages.
+This is the static website version of the IO Growth business consulting site, optimized for hosting on GitHub Pages.
 
 ## Structure
 
@@ -33,6 +33,6 @@ To preview the site locally, simply open the `index.html` file in your browser.
 
 ## Credits
 
-- Logo and branding: Growth IO
+- Logo and branding: IO Growth
 - Icons: Font Awesome
 - Fonts: System fonts

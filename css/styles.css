@@ -1413,7 +1413,6 @@ body.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-8px) rotat
     column-gap: 32px;
   }
   .engage-grid { grid-template-columns: 1fr; }
-  .engage-card-flagship { order: -1; }
 }
 
 @media (max-width: 960px) {

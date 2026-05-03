@@ -2,217 +2,402 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-  <meta name="description" content="IO Growth — We help ambitious teams move faster with sharper planning, better systems, and hands-on execution.">
-  
-  <title>IO Growth | Strategic Business Consulting</title>
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/io-growth-symbol.svg">
-  
-  <!-- Open Graph tags for social sharing -->
-  <meta property="og:title" content="IO Growth | Business Consulting">
-  <meta property="og:description" content="We help ambitious teams move faster with sharper planning, better systems, and hands-on execution.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fractional AI Strategy Officers who embed with your team — building AI capability within your workflows, not around them.">
+  <title>IO Growth | Fractional AI Strategy Officers</title>
+
+  <link rel="icon" type="image/png" href="assets/io-growth-symbol.png">
+
+  <meta property="og:title" content="IO Growth | Fractional AI Strategy Officers">
+  <meta property="og:description" content="Fractional AI Strategy Officers who embed with your team — building AI capability within your workflows, not around them.">
   <meta property="og:url" content="https://iogrowth.com">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/io-growth-horizontal-light.svg">
-  
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Custom CSS -->
+  <meta property="og:image" content="assets/io-growth-horizontal-light.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Header Section -->
+
+  <!-- Header -->
   <header class="header">
-    <div class="container">
-      <div class="header-content">
-        <div class="logo">
-          <a href="#" class="logo-link">
-            <img src="assets/io-growth-horizontal-light.svg" alt="IO Growth" class="logo-image">
-          </a>
-        </div>
-        <nav class="main-nav">
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-      
-      <!-- Mobile Navigation -->
-      <div class="mobile-nav">
-        <div class="mobile-nav-links">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </div>
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="IO Growth home">
+        <img src="assets/io-growth-horizontal-light.png" alt="IO Growth">
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#engage">How we engage</a>
+        <a href="#contact" class="nav-cta">Get in touch</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+    <nav class="nav-mobile" aria-label="Mobile" aria-hidden="true">
+      <a href="#about">About</a>
+      <a href="#engage">How we engage</a>
+      <a href="#contact">Get in touch</a>
+    </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="about" class="hero">
-    <div class="container">
-      <h1>Smarter strategy, stronger operations, faster growth.</h1>
-      <p class="hero-text">We help ambitious teams move faster with sharper planning, better systems, and hands-on execution.</p>
-      <a href="#contact" class="btn btn-primary" id="get-started-btn" onclick="event.preventDefault(); document.getElementById('contact').scrollIntoView({behavior: 'smooth', block: 'start'});">Get Started</a>
-    </div>
-    
-    <!-- Background elements -->
-    <div class="hero-bg-pattern"></div>
-    <div class="hero-bg-symbol">
-      <img src="assets/io-growth-symbol.svg" alt="">
-    </div>
-  </section>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
 
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <div class="container">
-      <h2 class="section-title">Our Services</h2>
-      <p class="section-subtitle">Expert consulting solutions to help your organization accelerate growth and optimize performance.</p>
-      
-      <div class="services-grid">
-        <!-- Service 1 -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-briefcase"></i>
-          </div>
-          <h3>Strategy & Planning</h3>
-          <p>Sharpen your roadmap with clear goals, smart priorities, and practical execution plans.</p>
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <div class="hero-title">
+          <span class="hero-title-mark" aria-hidden="true">[ + ]</span>
+          <span class="hero-title-text">Fractional AI Strategy Officers</span>
         </div>
-        
-        <!-- Service 2 -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-bullseye"></i>
-          </div>
-          <h3>Go-To-Market Strategy</h3>
-          <p>Design smart, scalable go-to-market plans that drive faster adoption, better conversions, and sustainable growth.</p>
-        </div>
-        
-        <!-- Service 3 -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <h3>Revenue Strategy & Operations</h3>
-          <p>Build the systems, processes, and incentives needed to grow and scale revenue predictably.</p>
-        </div>
-        
-        <!-- Service 4 -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-dollar-sign"></i>
-          </div>
-          <h3>Financial Planning & Analysis</h3>
-          <p>Forecast smarter, manage cash better, and make faster, more confident decisions.</p>
-        </div>
-        
-        <!-- Service 5 -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-database"></i>
-          </div>
-          <h3>Tech Stack Optimization</h3>
-          <p>Simplify and upgrade your tools to work smarter — not harder — as you scale.</p>
-        </div>
-        
-        <!-- Service 6 -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-chart-bar"></i>
-          </div>
-          <h3>Business Intelligence & Reporting</h3>
-          <p>Turn your data into simple, actionable insights that power better decisions.</p>
+        <h1 class="hero-headline">
+          Build AI capability <em class="hero-headline-accent">within</em> your team — not around it.
+        </h1>
+        <p class="hero-sub">
+          We embed as your Fractional AI Strategy Officer, building workflows alongside your team and teaching as we go. You end the engagement with AI shipped and your team ready to keep building without us.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-hero-primary">
+            Start with a conversation
+            <span class="btn-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#engage" class="hero-link-secondary">How we engage <span aria-hidden="true">→</span></a>
         </div>
       </div>
-      
-      <!-- Services CTA removed -->
+
+      <div class="hero-decoration" aria-hidden="true">
+        <!-- PNG has a black matte; screen blend removes it on the cream hero so only the mark reads -->
+        <img
+          class="hero-brand-mark"
+          src="assets/PNGs/io-growth-symbol.png"
+          alt=""
+          width="320"
+          height="320"
+          decoding="async"
+        />
+      </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="about-highlight">
+      <svg class="about-ornament" viewBox="0 0 300 300" aria-hidden="true">
+        <g stroke="currentColor" stroke-width="6" fill="none">
+          <path d="M 30 80 L 30 30 L 80 30"/>
+          <path d="M 270 220 L 270 270 L 220 270"/>
+        </g>
+      </svg>
+
+      <div class="container about-highlight-inner">
+        <div class="about-head">
+          <div class="section-label dark">About</div>
+          <h2 class="about-headline">
+            Operators first.<br>
+            <span class="muted">AI second.</span>
+          </h2>
+          <p class="about-lede">
+            We've spent 15 years building the workflows and playbooks you're already running. We layer AI into that reality, not bolted on top of it.
+          </p>
+        </div>
+
+        <div class="about-areas">
+          <div class="about-areas-label">Where our experience comes from</div>
+          <div class="about-areas-grid">
+            <div class="about-area">
+            <div class="about-area-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <circle cx="12" cy="12" r="6"/>
+                <circle cx="12" cy="12" r="2"/>
+              </svg>
+            </div>
+            <div class="about-area-rule" aria-hidden="true"></div>
+            <div class="about-area-body">
+              <div class="about-area-name">Strategy &amp; Planning</div>
+              <div class="about-area-desc">Roadmaps and priorities leaders can execute against.</div>
+            </div>
+            </div>
+            <div class="about-area">
+            <div class="about-area-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+              </svg>
+            </div>
+            <div class="about-area-rule" aria-hidden="true"></div>
+            <div class="about-area-body">
+              <div class="about-area-name">Go-To-Market</div>
+              <div class="about-area-desc">Segmentation, positioning, packaging, motion design.</div>
+            </div>
+          </div>
+          <div class="about-area">
+            <div class="about-area-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 3H2l8 9.46V19l4 2v-6.54L22 3z"/>
+              </svg>
+            </div>
+            <div class="about-area-rule" aria-hidden="true"></div>
+            <div class="about-area-body">
+              <div class="about-area-name">Revenue Strategy &amp; Operations</div>
+              <div class="about-area-desc">Pipeline, quotas, comp, deal desk, conversion analytics.</div>
+            </div>
+          </div>
+          <div class="about-area">
+            <div class="about-area-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="2" width="16" height="20" rx="2"/>
+                <path d="M8 6h8M8 10h8M8 14h5"/>
+              </svg>
+            </div>
+            <div class="about-area-rule" aria-hidden="true"></div>
+            <div class="about-area-body">
+              <div class="about-area-name">Financial Planning &amp; Analysis</div>
+              <div class="about-area-desc">Forecasting, modeling, capacity planning, board and investor reporting.</div>
+            </div>
+          </div>
+          <div class="about-area">
+            <div class="about-area-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2"/>
+                <rect x="9" y="9" width="6" height="6" rx="1"/>
+                <path d="M15 2v2M15 20v2M9 2v2M9 20v2M2 15h2M2 9h2M22 15h2M22 9h2"/>
+              </svg>
+            </div>
+            <div class="about-area-rule" aria-hidden="true"></div>
+            <div class="about-area-body">
+              <div class="about-area-name">Tech Stack Optimization</div>
+              <div class="about-area-desc">Auditing tools, simplifying integrations, eliminating drag.</div>
+            </div>
+          </div>
+          <div class="about-area">
+            <div class="about-area-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18"/>
+                <path d="M7 16v-5M12 16V8M17 16v-3"/>
+              </svg>
+            </div>
+            <div class="about-area-rule" aria-hidden="true"></div>
+            <div class="about-area-body">
+              <div class="about-area-name">Business Intelligence &amp; Reporting</div>
+              <div class="about-area-desc">Dashboards, cadences, exec-ready insights.</div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container about-continuation">
+      <!-- Fractional AI Strategy Officer block -->
+      <div class="about-work">
+        <div class="about-work-label">Your Fractional AI Strategy Officer</div>
+        <div class="about-work-copy">
+          <p class="about-work-lead">
+            We pair with named functional leads from across your business and <strong class="about-work-accent">build with them, not for them</strong>, on a monthly cadence.
+          </p>
+          <p class="about-work-follow">
+            By the end, the workflows ship — and your team keeps the muscle memory and the judgment.
+          </p>
+        </div>
+      </div>
+
+      <!-- Pull quote / poster moment -->
+      <div class="about-pullquote">
+        <div class="about-pullquote-mark" aria-hidden="true">
+          <img src="assets/SVGs/io-growth-symbol-white.svg" alt="" width="80" height="80" />
+        </div>
+        <p>
+          Real success is the day you do not need us anymore.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- How we engage -->
+  <section id="engage" class="engage">
     <div class="container">
-      <h2 class="section-title">Get in Touch</h2>
-      <p class="section-subtitle">We don't just advise — we build alongside you. Ready to move faster?</p>
-      
-      <div class="contact-card">
-        <div class="contact-options">
-          <!-- Email Contact -->
-          <div class="contact-option">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <h3>Email Us</h3>
-            <p>Reach out directly to our team</p>
-            <a href="mailto:brandon@iogrowth.com" class="contact-link">
-              info@iogrowth.com
-              <i class="fas fa-arrow-right"></i>
-            </a>
+      <div class="engage-head">
+        <div class="section-label dark">How we engage</div>
+        <h2 class="engage-headline">
+          Three ways to work together.
+        </h2>
+        <p class="engage-sub">
+          Most clients start with the Assessment, then move into the Fractional AI Strategy Officer engagement. AI Advisory is reserved for graduates.
+        </p>
+      </div>
+
+      <div class="engage-grid">
+        <!-- Card 1: Standalone Diagnostic -->
+        <article class="engage-card">
+          <div class="engage-card-tier">Standalone Diagnostic</div>
+          <h3>AI Operations Assessment</h3>
+          <div class="engage-card-meta">3 weeks · Fixed scope</div>
+          <p class="engage-card-desc">
+            A focused diagnostic to identify where AI creates the most value in your business — and exactly how to capture it.
+          </p>
+          <ul class="engage-card-list">
+            <li>Assessment of current tools, AI readiness, and team skill across identified GTM and operations leads</li>
+            <li>Prioritized roadmap of the top AI opportunities — what to build, in what order, and why</li>
+            <li>Recommended tools, implementation approach, and cost estimates for each priority workstream</li>
+            <li>Ownership map — leads, support, and internal capacity required per workstream</li>
+          </ul>
+        </article>
+
+        <!-- Card 2: Embedded Engagement -->
+        <article class="engage-card engage-card-flagship">
+          <div class="engage-flagship-mark">The Main Work</div>
+          <div class="engage-card-tier">Embedded Engagement</div>
+          <h3>Fractional AI Strategy Officer</h3>
+          <div class="engage-card-meta">3 - 6 months</div>
+          <p class="engage-card-desc">
+            We embed as your Fractional AI Strategy Officer, paired with named functional leads across your business. Together we architect the highest-leverage AI workflows — and your team builds them with us, hands-on.
+          </p>
+          <div class="engage-card-includes">
+            <ul class="engage-card-list engage-card-list--flagship">
+              <li>Tool selection and vendor evaluation</li>
+              <li>AI roadmap ownership and prioritization</li>
+              <li>Hands-on architecture across AI workflows</li>
+              <li>Skill and connector configuration</li>
+              <li>Weekly working sessions with named lead(s)</li>
+              <li>Biweekly leadership check-ins</li>
+              <li>Internal training and capability transfer</li>
+              <li>Async support throughout</li>
+            </ul>
           </div>
-          
-          <!-- LinkedIn Contact -->
-          <div class="contact-option">
-            <div class="contact-icon linkedin">
-              <i class="fab fa-linkedin-in"></i>
+        </article>
+
+        <!-- Card 3: Post Engagement -->
+        <article class="engage-card">
+          <div class="engage-card-tier">Post Engagement</div>
+          <h3>AI Advisory</h3>
+          <div class="engage-card-meta">Continuing</div>
+          <p class="engage-card-desc">
+            Once your team is running the AI playbook, we stay on as a sounding board without the embedded cadence.
+          </p>
+          <ul class="engage-card-list">
+            <li>Keep your AI work aligned to business value as you scale.</li>
+            <li>Biweekly strategy calls</li>
+            <li>Priority async support</li>
+            <li>Quarterly roadmap reviews</li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- Typical month cascade -->
+      <div class="rhythm-section" aria-label="What a typical month with us looks like">
+        <div class="rhythm-section-header">
+          <h3 class="rhythm-section-title">What a typical month with us looks like</h3>
+        </div>
+        <div class="cascade">
+          <div class="cascade-tile cascade-tile-1">
+            <div class="cascade-tile-stage">Week 1</div>
+            <div class="cascade-tile-title">Strategic alignment &amp; defining success</div>
+          </div>
+          <div class="cascade-tile cascade-tile-2">
+            <div class="cascade-tile-stage">Week 2</div>
+            <div class="cascade-tile-title">Build AI workflows alongside functional leads</div>
+          </div>
+          <div class="cascade-tile cascade-tile-3">
+            <div class="cascade-tile-stage">Week 3</div>
+            <div class="cascade-tile-title">Functional leads drive, we coach</div>
+          </div>
+          <div class="cascade-tile cascade-tile-4 cascade-tile-final">
+            <div class="cascade-tile-stage">Week 4</div>
+            <div class="cascade-tile-final-body">
+              <div class="cascade-tile-title">Ship, train forward, plan next month</div>
             </div>
-            <h3>Connect on LinkedIn</h3>
-            <p>Follow our company updates</p>
-            <a href="https://www.linkedin.com/company/growth-io/" target="_blank" rel="noopener noreferrer" class="contact-link">
-              View LinkedIn Profile
-              <i class="fas fa-arrow-right"></i>
-            </a>
+            <div class="cascade-tile-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="4 12 10 18 20 6"/>
+              </svg>
+            </div>
           </div>
         </div>
-        
-        <div class="contact-footer">
-          <p>We typically respond to all inquiries within 24 hours during business days.</p>
-        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="contact-grid-bg" aria-hidden="true"></div>
+    <div class="container contact-inner">
+      <div class="contact-mark" aria-hidden="true">
+        <img src="assets/io-growth-symbol.png" alt="">
+      </div>
+      <div class="section-label">Contact</div>
+      <h2 class="contact-headline">Start with a conversation.</h2>
+      <p class="contact-sub">
+        Every engagement starts with a conversation about where AI fits in your business. If there's a fit, we'll scope it together.
+      </p>
+
+      <div class="contact-options">
+        <a href="mailto:info@iogrowth.com" class="contact-card">
+          <div class="contact-card-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="14" rx="2"/>
+              <path d="M3 7l9 6 9-6"/>
+            </svg>
+          </div>
+          <div class="contact-card-body">
+            <div class="contact-card-tag">Email</div>
+            <div class="contact-card-value">info@iogrowth.com</div>
+          </div>
+          <div class="contact-card-arrow" aria-hidden="true">→</div>
+        </a>
+
+        <a href="https://www.linkedin.com/company/growth-io/" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-card-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.337 18.339V9.882H5.667v8.457h2.67zM7.003 8.575c.85 0 1.385-.564 1.385-1.27-.016-.722-.535-1.272-1.37-1.272s-1.385.55-1.385 1.272c0 .706.534 1.27 1.354 1.27h.016zM18.34 18.339v-4.85c0-2.467-1.317-3.616-3.073-3.616-1.418 0-2.053.78-2.408 1.328v-1.139h-2.67c.035.755 0 8.057 0 8.057h2.67v-4.722c0-.24.017-.48.088-.652.193-.48.633-.978 1.371-.978.967 0 1.354.736 1.354 1.816v4.535h2.668z"/>
+            </svg>
+          </div>
+          <div class="contact-card-body">
+            <div class="contact-card-tag">LinkedIn</div>
+            <div class="contact-card-value">Connect with IO Growth</div>
+          </div>
+          <div class="contact-card-arrow" aria-hidden="true">→</div>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <svg class="footer-logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 100" role="img" aria-label="IO Growth">
-              <rect width="100%" height="100%" fill="#2D2F3A"/>
-              <path d="M20,27 L20,20 L46,20 L46,27 L27,27 L27,46 L20,46 Z" fill="#9DA0AE"/>
-              <path d="M80,73 L80,80 L54,80 L54,73 L73,73 L73,54 L80,54 Z" fill="#9DA0AE"/>
-              <rect x="41" y="47.5" width="18" height="5" rx="1" fill="#F5922A"/>
-              <rect x="47.5" y="41" width="5" height="18" rx="1" fill="#F5922A"/>
-              <g fill="#FFFFFF"><path d="M102.53 67.28L96 67.28L96 32.72L102.53 32.72L102.53 67.28ZM124.56 68L124.56 68Q119.38 68 115.62 65.74Q111.86 63.49 109.84 59.43Q107.81 55.38 107.81 50L107.81 50Q107.81 44.62 109.84 40.57Q111.86 36.51 115.62 34.26Q119.38 32 124.56 32L124.56 32Q129.74 32 133.50 34.26Q137.26 36.51 139.28 40.57Q141.31 44.62 141.31 50L141.31 50Q141.31 55.38 139.28 59.43Q137.26 63.49 133.50 65.74Q129.74 68 124.56 68ZM124.56 61.86L124.56 61.86Q127.85 61.90 130.03 60.44Q132.22 58.98 133.31 56.29Q134.40 53.60 134.40 50L134.40 50Q134.40 46.40 133.31 43.76Q132.22 41.12 130.03 39.66Q127.85 38.19 124.56 38.14L124.56 38.14Q121.27 38.10 119.09 39.56Q116.90 41.02 115.81 43.71Q114.72 46.40 114.72 50L114.72 50Q114.72 53.60 115.81 56.24Q116.90 58.88 119.09 60.34Q121.27 61.81 124.56 61.86Z"/></g>
-              <g fill="#9DA0AE"><path d="M163.80 68L163.80 68Q160.15 68 157.22 66.73Q154.30 65.46 152.24 63.10Q150.19 60.75 149.11 57.43Q148.03 54.10 148.03 50L148.03 50Q148.03 44.58 149.92 40.53Q151.80 36.49 155.33 34.26Q158.86 32.02 163.80 32.02L163.80 32.02Q169.32 32.02 172.79 34.60Q176.26 37.18 177.62 41.53L177.62 41.53L174.07 42.39Q172.94 39.22 170.36 37.33Q167.78 35.43 163.94 35.43L163.94 35.43Q159.89 35.41 157.20 37.24Q154.51 39.08 153.16 42.38Q151.80 45.68 151.78 50L151.78 50Q151.75 54.32 153.11 57.60Q154.46 60.87 157.18 62.73Q159.89 64.59 163.94 64.62L163.94 64.62Q167.66 64.62 170.09 63.18Q172.51 61.74 173.77 59.05Q175.03 56.36 175.20 52.69L175.20 52.69L167.23 52.69L167.23 49.66L178.90 49.66Q178.97 50.22 178.98 50.83Q178.99 51.44 178.99 51.70L178.99 51.70Q178.99 56.38 177.31 60.07Q175.63 63.75 172.26 65.88Q168.89 68 163.80 68ZM187.32 67.28L183.79 67.28L183.79 41.36L186.96 41.36L186.96 45.44Q187.20 45.03 187.46 44.65L187.46 44.65Q188.16 43.69 188.98 43.06L188.98 43.06Q189.98 42.18 191.33 41.71Q192.67 41.24 194.04 41.16Q195.41 41.07 196.54 41.36L196.54 41.36L196.54 44.67Q195.12 44.31 193.44 44.50Q191.76 44.70 190.34 45.85L190.34 45.85Q189.05 46.86 188.40 48.26Q187.75 49.66 187.54 51.24Q187.32 52.81 187.32 54.34L187.32 54.34L187.32 67.28ZM211.44 68L211.44 68Q207.58 68 204.84 66.25Q202.10 64.50 200.64 61.40Q199.18 58.30 199.18 54.30L199.18 54.30Q199.18 50.22 200.66 47.14Q202.15 44.07 204.90 42.36Q207.65 40.64 211.44 40.64L211.44 40.64Q215.33 40.64 218.08 42.38Q220.82 44.12 222.28 47.20Q223.73 50.29 223.73 54.30L223.73 54.30Q223.73 58.38 222.26 61.46Q220.80 64.54 218.04 66.27Q215.28 68 211.44 68ZM211.44 64.62L211.44 64.62Q215.76 64.62 217.87 61.75Q219.98 58.88 219.98 54.30L219.98 54.30Q219.98 49.59 217.86 46.81Q215.74 44.02 211.44 44.02L211.44 44.02Q208.54 44.02 206.65 45.33Q204.77 46.64 203.84 48.96Q202.92 51.27 202.92 54.30L202.92 54.30Q202.92 58.98 205.08 61.80Q207.24 64.62 211.44 64.62ZM236.64 67.28L233.57 67.28L225.65 41.34L229.18 41.36L235.32 61.50L241.49 41.36L244.70 41.36L250.87 61.50L257.06 41.36L260.57 41.36L252.65 67.28L249.58 67.28L243.10 46.64L236.64 67.28ZM279 64.18L279 67.28Q276.82 67.74 274.69 67.64Q272.57 67.54 270.90 66.73Q269.23 65.91 268.37 64.18L268.37 64.18Q267.67 62.74 267.61 61.27Q267.55 59.79 267.55 57.90L267.55 57.90L267.55 44.38L262.01 44.38L262.01 41.36L267.55 41.36L267.55 34.16L271.06 34.16L271.06 41.36L279 41.36L279 44.38L271.06 44.38L271.06 57.75Q271.06 59.38 271.09 60.48Q271.13 61.57 271.58 62.41L271.58 62.41Q272.45 64.02 274.33 64.33Q276.22 64.64 279 64.18L279 64.18ZM306.38 67.28L302.83 67.28L302.83 54.06Q302.83 51.90 302.42 50.08Q302.02 48.27 301.12 46.92Q300.22 45.56 298.79 44.82Q297.36 44.07 295.32 44.07L295.32 44.07Q293.45 44.07 292.02 44.72Q290.59 45.37 289.62 46.58Q288.65 47.79 288.14 49.52Q287.64 51.25 287.64 53.46L287.64 53.46L287.64 67.28L284.09 67.28L284.09 32.72L287.28 32.72L287.28 44.96Q288.53 43.16 290.38 42.10L290.38 42.10Q292.82 40.71 295.99 40.71L295.99 40.71Q298.32 40.71 300.06 41.43Q301.80 42.15 303.01 43.38Q304.22 44.60 304.97 46.17Q305.71 47.74 306.05 49.51Q306.38 51.27 306.38 53.02L306.38 53.02L306.38 67.28Z"/></g>
-            </svg>
-          </div>
-          <p class="footer-tagline">Smarter strategy. Stronger operations. Faster growth.</p>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="assets/io-growth-symbol.png" alt="" class="footer-symbol">
+          <span class="footer-wordmark"><strong>IO</strong>Growth</span>
         </div>
-        
-        <nav class="footer-nav">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
-        </nav>
+        <p class="footer-tag">IO Growth — Fractional AI Strategy Officers who build as much as we teach.</p>
       </div>
-      
+      <nav class="footer-nav" aria-label="Footer">
+        <div class="footer-col">
+          <div class="footer-col-label">Site</div>
+          <a href="#about">About</a>
+          <a href="#engage">How we engage</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-label">Get in touch</div>
+          <a href="mailto:info@iogrowth.com">info@iogrowth.com</a>
+          <a href="https://www.linkedin.com/company/growth-io/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </nav>
       <div class="footer-bottom">
-        <p>&copy; <span id="year"></span> IO Growth. All rights reserved.</p>
+        <span>&copy; <span id="year"></span> IO Growth LLC. All rights reserved.</span>
       </div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="js/get-started-button.js"></script>
-  <script src="js/simple-scroll.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

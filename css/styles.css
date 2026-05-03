@@ -457,14 +457,14 @@ body.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-8px) rotat
    Rhythm section — Embedded Engagement, typical month
    ============================================ */
 .rhythm-section {
-  margin-top: 80px;
-  padding-top: 56px;
+  margin-top: 56px;
+  padding-top: 40px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .rhythm-section-header {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .rhythm-section-eyebrow {
@@ -489,8 +489,8 @@ body.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-8px) rotat
 .cascade {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .cascade-tile {
@@ -1022,7 +1022,7 @@ body.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-8px) rotat
 .engage .container { position: relative; z-index: 1; }
 
 .engage-head {
-  margin-bottom: 56px;
+  margin-bottom: 48px;
   max-width: 760px;
 }
 
@@ -1051,8 +1051,8 @@ body.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-8px) rotat
 .engage-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  align-items: stretch;
+  gap: 12px;
+  align-items: start;
 }
 
 .engage-card {
@@ -1404,10 +1404,6 @@ body.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-8px) rotat
    Responsive
    ============================================ */
 @media (max-width: 1100px) {
-  .cascade-tile-1 { margin-right: 24%; }
-  .cascade-tile-2 { margin-left: 8%; margin-right: 16%; }
-  .cascade-tile-3 { margin-left: 16%; margin-right: 8%; }
-  .cascade-tile-4 { margin-left: 24%; }
   .about-areas-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 32px;
@@ -1432,12 +1428,9 @@ body.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-8px) rotat
     opacity: 0.12;
   }
 
-  .cascade-tile-1,
-  .cascade-tile-2,
-  .cascade-tile-3,
-  .cascade-tile-4 {
-    margin-left: 0;
-    margin-right: 0;
+  .cascade {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .about { padding: 0 0 72px; }

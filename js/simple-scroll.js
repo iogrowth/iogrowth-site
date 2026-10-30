@@ -15,39 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // EXPLICITLY handle the Get Started button
-  const getStartedBtn = document.getElementById('get-started-btn');
-  if (getStartedBtn) {
-    console.log('Get Started button found:', getStartedBtn);
-    
-    getStartedBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      console.log('Get Started button clicked!');
-      
-      const contactSection = document.getElementById('contact');
-      if (contactSection) {
-        // Get header height or use a default value
-        const headerHeight = document.querySelector('.header')?.offsetHeight || 80;
-        const yOffset = -headerHeight; // Adjust the scroll position by header height
-        const y = contactSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        
-        console.log('Scrolling to contact section, header height:', headerHeight);
-        console.log('Target position:', y);
-        
-        window.scrollTo({
-          top: y,
-          behavior: 'smooth'
-        });
-      } else {
-        console.error('Contact section not found!');
-      }
-    });
-  } else {
-    console.error('Get Started button not found!');
-  }
-
   // Handle all other anchor links
-  document.querySelectorAll('a[href^="#"]:not(#get-started-btn)').forEach(anchor => {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
       
@@ -113,22 +82,22 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Additional safety measure - attach event after a short delay
-setTimeout(function() {
-  const getStartedBtn = document.getElementById('get-started-btn');
-  if (getStartedBtn) {
-    console.log('Adding backup click handler to Get Started button');
-    
-    getStartedBtn.addEventListener('click', function(event) {
-      event.preventDefault();
-      console.log('Get Started button clicked (backup handler)!');
-      
-      const contactElement = document.getElementById('contact');
-      if (contactElement) {
-        contactElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+// Fade sections in as they scroll into view
+document.addEventListener('DOMContentLoaded', function() {
+  const revealEls = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    revealEls.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
       }
     });
-  }
-}, 500);
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => observer.observe(el));
+});
 
 console.log('Simple scroll handler initialized');
